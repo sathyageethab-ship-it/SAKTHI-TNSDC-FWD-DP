@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  <!-- ✅ jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+        <h2><i class="fas fa-user-circle"></i> ComicCast</h2>
+        <button id="theme-toggle" title="Toggle light/dark mode"><span id="theme-icon">🌞</span></button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#dashboard"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#education"><i class="fas fa-book"></i> Education</a>
+        <a href="#projects"><i class="fas fa-briefcase"></i> Projects</a>
+        <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+        <a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a>
+        <a href="#timeline"><i class="fas fa-clock"></i> Timeline</a>
+        <a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+      <div class="sidebar-footer">
+        <!-- ✅ Resume Button -->
+        <button id="resume-btn" class="btn"><i class="fas fa-download"></i> Resume</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Dashboard -->
+      <section id="dashboard">
+        <h1>Welcome, <span class="highlight">Sakthi Priya B</span>!</h1>
+        <input type="text" id="project-search" placeholder="Search projects...">
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Creative [Youtuber] | Passionate about influencer  
+          With [1] years of experience in [movie Field], I craft innovative solutions that captivate audiences and drive results.  
+          My expertise lies in [photo editor], with a passion for [video editor].
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>B.Sc. Computer Science</strong> – Govt. Arts & Science College, Avinashi (2024–2027)</li>
+          <li><strong>HSLC (CS-Maths)</strong> – St. Joseph Girls Hr. Sec. School, Somanur (2021–2023)</li>
+          <li><strong>SSLC</strong> – St. Joseph Girls Hr. Sec. School, Somanur (2008–2020)</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="https://picsum.photos/400/300?random=1" alt="Creative Portfolio">
+            <div class="project-info">
+              <h3>Creative Portfolio</h3>
+              <p>Responsive website built with HTML, CSS, JS.</p>
+              <a href="#" class="btn">Download</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="https://picsum.photos/400/300?random=2" alt="Web App">
+            <div class="project-info">
+              <h3>Web App</h3>
+              <p>Full-stack app with authentication and cloud hosting.</p>
+              <a href="#" class="btn">Download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <h3>How I Built My Portfolio</h3>
+            <p>Step by step guide on creating a modern portfolio site.</p>
+          </div>
+          <div class="blog-card">
+            <h3>Top 5 Web Dev Tips</h3>
+            <p>Some practical tips for beginners in web development.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial">"Great creativity and coding skills!" – Mentor</div>
+        <div class="testimonial">"Always delivers projects on time." – Peer</div>
+      </section>
+
+      <!-- Timeline -->
+      <section id="timeline">
+        <h2>Timeline</h2>
+        <div class="timeline">
+          <div class="event">2025 – IBM SkillsBuild Certificate</div>
+          <div class="event">2024 – Started B.Sc. Computer Science</div>
+          <div class="event">2023 – Completed HSC</div>
+        </div>
+      </section>
+
+      <!-- Certificates -->
+      <section id="certificates">
+        <h2>Certificates</h2>
+        <div class="certificate-list">
+          <div class="certificate-card">
+            <img src="certificate1.jpg" alt="IBM SkillsBuild Certificate" class="certificate-img" />
+            <div>
+              <h3>IBM SkillsBuild Certificate</h3>
+              <p>Issued: 2025</p>
+              <a href="Completion Certificate _ SkillsBuild.PDF" class="btn" download>Download PDF</a>
+              <br>
+              <iframe src="Completion Certificate _ SkillsBuild.PDF" width="350" height="400"></iframe>
+            </div>
+          </div>
+          <div class="certificate-card">
+            <img src="certificate2.jpg" alt="MongoDB Basics for Students" class="certificate-img" />
+            <div>
+              <h3>MongoDB Basics for Students</h3>
+              <p>Issued: 2025</p>
+              <a href="MongoDBBasicsforStudents_Badge20250806-31-sk4dkz.pdf" class="btn" download>Download PDF</a>
+              <br>
+              <iframe src="MongoDBBasicsforStudents_Badge20250806-31-sk4dkz.pdf" width="350" height="400"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <span class="skill-badge" data-skill="html">HTML</span>
+        <span class="skill-badge" data-skill="css">CSS</span>
+        <span class="skill-badge" data-skill="js">JavaScript</span>
+        <span class="skill-badge" data-skill="uiux">UI/UX</span>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> +91 6379800595</p>
+        <p><strong>Email:</strong> <a href="mailto:sathyageethab@gmail.com">sathyageethab@gmail.com</a></p>
+        <a href="https://github.com/MohammedYaseen55" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 ComicCast. Crafted with ❤️</p>
+      </footer>
+    </main>
+  </div>
